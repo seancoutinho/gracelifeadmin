@@ -27,7 +27,9 @@
 }
 
 .input {
-    background-color: transparent;
+    background-color: darkgreen;
     border: none;
-    color: var(--textSidebar);
+    color: white;
+    padding: 10px 5px;
+    border-radius: 5px;
 }
