@@ -11,6 +11,8 @@ import {
   MdOutlineSettings,
   MdHelpCenter,
 } from "react-icons/md";
+import MenuLink from './menuLink/menuLink';
+import Image from 'next/image';
 
 const menuItems = [
   {
@@ -78,9 +80,21 @@ const menuItems = [
 const Sidebar = () => {
   return (
     <div className={styles.container}>
-      <ul>
+    <div className={styles.user}>
+      <Image className={styles.userImage} src='/noavatar.png' alt='user image' width={50} height={50} />
+      <div className={styles.userDetail}>
+        <span className={styles.username}>Sean Coutinho</span>
+        <span className={styles.userTitle}>Administrator</span>
+      </div>
+    </div>
+      <ul className={styles.list}>
         {menuItems.map(item => (
-          <li key={item.title}>{item.title}</li>
+          <li key={item.title}>
+            <span className={styles.cat}>{item.title}</span>
+            {item.list.map(item => (
+              <MenuLink item={item} key={item.title}/>
+            ))}
+          </li>
         )
         )}
       </ul>
