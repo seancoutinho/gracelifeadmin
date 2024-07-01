@@ -1,7 +1,7 @@
 .container {
-    position: sticky;
-    top: 40px;
-      color: var(--text);
+  position: sticky;
+  top: 40px;
+  color: var(--textSidebar);
 }
 
 .user {
@@ -42,4 +42,22 @@
   font-weight: bold;
   font-size: 13px;
   margin: 10px 0px;
+}
+
+.logout {
+  background: none;
+  color: white;
+  padding: 20px;
+  margin: 5px 0px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  width: 100%
+}
+
+.logout:hover {
+  background-color: #40B917;
 }

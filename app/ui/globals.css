@@ -1,8 +1,9 @@
 :root {
     --bg: white;
     --bgSoft: #46C500;
-    --text: white;
+    --text: black;
     --textSoft: #b7bac1;
+    --textSidebar: #ffffff;
 }
 
 * {
