@@ -2,11 +2,12 @@
     --bg: white;
     --bgSoft: #46C500;
     --text: #ffffff;
-    --textWhiteBg: #b7bac1;
+    --textWhiteBg: black;
     --textSidebar: #ffffff;
 }
 
 * {
+    font-family: cursive;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
