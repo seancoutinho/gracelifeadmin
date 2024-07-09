@@ -4,7 +4,6 @@ import Search from '@/app/ui/dashboard/search/search'
 import Link from 'next/link'
 import Image from 'next/image'
 import Pagination from '@/app/ui/dashboard/pagination/pagination'
-import { searchParams } from 'next/navigation'
 import { fetchProducts } from '@/app/lib/data'
 
 const Products = async ({ searchParams }) => {
@@ -49,7 +48,7 @@ const Products = async ({ searchParams }) => {
               </td>
               <td>{product.desc}</td>
               <td>{product.price}</td>
-              <td>{product.createdAt?.toString().splice(4, 16)}</td>
+              <td>{product.createdAt?.toString().slice(4, 16)}</td>
               <td>72</td>
               <td>
                 <div className={styles.buttons}>
@@ -63,7 +62,7 @@ const Products = async ({ searchParams }) => {
           ))}
         </tbody>
       </table>
-      <Pagination />
+      <Pagination count={count}/>
     </div>
   )
 }
